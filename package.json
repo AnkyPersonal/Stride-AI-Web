@@ -1,0 +1,44 @@
+{
+  "name": "stride-ai-website",
+  "version": "1.0.0",
+  "description": "Stride AI - Your AI-powered running coach website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "deploy": "./deploy.sh",
+    "build": "echo 'No build process needed for static site'",
+    "minify-css": "npx cssnano styles.css -o styles.min.css",
+    "minify-js": "npx terser script.js -o script.min.js",
+    "optimize": "npm run minify-css && npm run minify-js",
+    "lint": "echo 'No linting configured for static site'",
+    "test": "echo 'No tests configured for static site'"
+  },
+  "keywords": [
+    "running",
+    "ai",
+    "coach",
+    "fitness",
+    "apple-watch",
+    "supabase",
+    "website"
+  ],
+  "author": "Stride AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^6.0.0",
+    "terser": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/SmartAgent.git"
+  },
+  "homepage": "https://your-domain.com",
+  "bugs": {
+    "url": "https://github.com/your-username/SmartAgent/issues"
+  }
+} 
