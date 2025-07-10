@@ -211,19 +211,49 @@ body {
     width: 280px;
     height: 560px;
     overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border-radius: 35px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 8px solid #1a1a1a;
+    background: #1a1a1a;
+}
+
+/* iPhone frame elements */
+.screenshot-carousel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background: #1a1a1a;
+    border-radius: 0 0 15px 15px;
+    z-index: 10;
+}
+
+.screenshot-carousel::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+    z-index: 10;
 }
 
 .app-screenshot {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease;
+    border-radius: 27px;
 }
 
 .app-screenshot.active {
@@ -738,5 +768,20 @@ body {
     .screenshot-carousel {
         width: 240px;
         height: 480px;
+        border-radius: 30px;
+    }
+    
+    .screenshot-carousel::before {
+        width: 100px;
+        height: 20px;
+        border-radius: 0 0 12px 12px;
+    }
+    
+    .app-screenshot {
+        top: 6px;
+        left: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        border-radius: 24px;
     }
 } 
