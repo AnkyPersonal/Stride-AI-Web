@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="../images/AiCoach.png">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
         .support-container {
@@ -74,6 +74,57 @@
         
         .back-link:hover {
             text-decoration: underline;
+        }
+        
+        /* Ensure icons display properly */
+        .fas, .fa {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+        
+        .fas.fa-arrow-left::before {
+            content: "\f060";
+        }
+        
+        /* Improve icon spacing */
+        .back-link i {
+            margin-right: 8px;
+        }
+        
+        /* Ensure hamburger menu icons work */
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Ensure navigation and footer icons work */
+        .nav-icon, .footer-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 0.5rem;
+            object-fit: contain;
+        }
+        
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Mobile responsive for icons */
+        @media (max-width: 768px) {
+            .nav-icon {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .footer-icon {
+                width: 20px;
+                height: 20px;
+            }
         }
     </style>
 </head>
@@ -149,7 +200,7 @@
 
         <div style="text-align: center;">
             <a href="../index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Back to Home
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> ← Back to Home
             </a>
         </div>
     </div>
