@@ -52,6 +52,13 @@ body {
     font-size: 1.8rem;
 }
 
+.nav-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    object-fit: contain;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -589,6 +596,13 @@ body {
 .footer-logo i {
     margin-right: 0.5rem;
     color: #2563eb;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    object-fit: contain;
 }
 
 .footer-section p {
